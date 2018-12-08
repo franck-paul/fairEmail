@@ -40,7 +40,7 @@ class dcFilterFairEmail extends dcSpamFilter
     {
         $blog = &$this->core->blog;
 
-        if ($blog->getComments([
+        if (($email != '') && $blog->getComments([
             'comment_email'     => $email,  // searched email
             'comment_status'    => 1,       // published comment
             'comment_trackback' => 0        // not a trackback
