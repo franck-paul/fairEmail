@@ -19,7 +19,7 @@ $this->registerModule(
     "Fair Email",                                     // Name
     "Fair Email filter for antispam Dotclear plugin", // Description
     "Franck Paul",                                    // Author
-    '0.1',                                            // Version
+    '0.1.1',                                          // Version
     [
         'requires'    => [['core', '2.13']], // Dependencies
         'permissions' => 'usage,contentadmin',
