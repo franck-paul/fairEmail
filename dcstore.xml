@@ -4,7 +4,7 @@
     <version>0.1.1</version>
     <author>Franck Paul</author>
     <desc>Fair Email filter for antispam Dotclear plugin</desc>
-    <file>https://github.com/franck-paul/fairEmail/releases/download/0.1.1/plugin-fairEmail.zip</file>
+    <file>https://github.com/franck-paul/fairEmail/releases/download/0.1.1/plugin-fairEmail-0.1.1.zip</file>
     <da:dcmin>2.13</da:dcmin>
     <da:details>https://open-time.net/?q=fairEmail</da:details>
     <da:support>https://github.com/franck-paul/fairEmail</da:support>
