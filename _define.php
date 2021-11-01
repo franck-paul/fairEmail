@@ -27,6 +27,6 @@ $this->registerModule(
 
         'details'    => 'https://open-time.net/?q=fairEmail',       // Details URL
         'support'    => 'https://github.com/franck-paul/fairEmail', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/main/dcstore.xml'
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/master/dcstore.xml'
     ]
 );
