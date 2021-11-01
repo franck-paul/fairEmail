@@ -10,7 +10,6 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
-
 if (!defined('DC_RC_PATH')) {
     return;
 }
@@ -41,9 +40,9 @@ class dcFilterFairEmail extends dcSpamFilter
         $blog = &$this->core->blog;
 
         if (($email != '') && $blog->getComments([
-            'comment_email'     => $email,  // searched email
-            'comment_status'    => 1,       // published comment
-            'comment_trackback' => 0        // not a trackback
+            'comment_email' => $email,  // searched email
+            'comment_status' => 1,      // published comment
+            'comment_trackback' => 0    // not a trackback
         ], true)->f(0) > 0) {
             // Mail already used in previous published comment, not a spam
             return false;
