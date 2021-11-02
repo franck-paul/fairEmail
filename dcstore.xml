@@ -1,8 +1,8 @@
 <modules xmlns:da="http://dotaddict.org/da/">
   <module id="fairEmail">
-    <name>Fair Email</name>
+    <name>Fair Email filter for antispam Dotclear plugin</name>
     <version>0.1.1</version>
-    <author>Franck Paul</author>
+    <author>Fair Email filter for antispam Dotclear plugin</author>
     <desc>Fair Email filter for antispam Dotclear plugin</desc>
     <file>https://github.com/franck-paul/fairEmail/releases/download/0.1.1/plugin-fairEmail-0.1.1.zip</file>
     <da:dcmin>2.13</da:dcmin>
