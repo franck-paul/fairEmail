@@ -14,5 +14,5 @@ if (!defined('DC_RC_PATH')) {
     return;
 }
 
-$__autoload['dcFilterFairEmail'] = dirname(__FILE__) . '/class.dc.filter.fairemail.php';
-$core->spamfilters[]             = 'dcFilterFairEmail';
+$__autoload['dcFilterFairEmail'] = __DIR__ . '/class.dc.filter.fairemail.php';
+dcCore::app()->spamfilters[]     = 'dcFilterFairEmail';

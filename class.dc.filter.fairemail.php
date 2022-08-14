@@ -20,9 +20,9 @@ class dcFilterFairEmail extends dcSpamFilter
     public $has_gui = false;
     public $active  = false;
 
-    public function __construct($core)
+    public function __construct($core = null)
     {
-        parent::__construct($core);
+        parent::__construct(dcCore::app());
     }
 
     protected function setInfo()
@@ -37,12 +37,10 @@ class dcFilterFairEmail extends dcSpamFilter
 
     public function isSpam($type, $author, $email, $site, $ip, $content, $post_id, &$status)
     {
-        $blog = &$this->core->blog;
-
-        if (($email != '') && $blog->getComments([
+        if (($email != '') && dcCore::app()->blog->getComments([
             'comment_email' => $email,  // searched email
             'comment_status' => 1,      // published comment
-            'comment_trackback' => 0    // not a trackback
+            'comment_trackback' => 0,    // not a trackback
         ], true)->f(0) > 0) {
             // Mail already used in previous published comment, not a spam
             return false;

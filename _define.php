@@ -18,15 +18,15 @@ $this->registerModule(
     'Fair Email',                                     // Name
     'Fair Email filter for antispam Dotclear plugin', // Description
     'Franck Paul',                                    // Author
-    '0.1.1',                                          // Version
+    '0.2',
     [
-        'requires'    => [['core', '2.13']], // Dependencies
+        'requires'    => [['core', '2.23']], // Dependencies
         'permissions' => 'usage,contentadmin',
         'priority'    => 200,
         'type'        => 'plugin',
 
         'details'    => 'https://open-time.net/?q=fairEmail',       // Details URL
         'support'    => 'https://github.com/franck-paul/fairEmail', // Support URL
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/master/dcstore.xml'
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/master/dcstore.xml',
     ]
 );
