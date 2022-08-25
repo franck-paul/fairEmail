@@ -20,11 +20,6 @@ class dcFilterFairEmail extends dcSpamFilter
     public $has_gui = false;
     public $active  = false;
 
-    public function __construct($core = null)
-    {
-        parent::__construct(dcCore::app());
-    }
-
     protected function setInfo()
     {
         $this->description = __('Fair Email spam filter');
