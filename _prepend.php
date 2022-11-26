@@ -14,5 +14,5 @@ if (!defined('DC_RC_PATH')) {
     return;
 }
 
-$__autoload['dcFilterFairEmail'] = __DIR__ . '/class.dc.filter.fairemail.php';
-dcCore::app()->spamfilters[]     = 'dcFilterFairEmail';
+Clearbricks::lib()->autoload(['dcFilterFairEmail' => __DIR__ . '/class.dc.filter.fairemail.php']);
+dcCore::app()->spamfilters[] = 'dcFilterFairEmail';

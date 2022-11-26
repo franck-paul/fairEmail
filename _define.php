@@ -15,18 +15,21 @@ if (!defined('DC_RC_PATH')) {
 }
 
 $this->registerModule(
-    'Fair Email',                                     // Name
-    'Fair Email filter for antispam Dotclear plugin', // Description
-    'Franck Paul',                                    // Author
-    '0.2',
+    'Fair Email',
+    'Fair Email filter for antispam Dotclear plugin',
+    'Franck Paul',
+    '0.3',
     [
-        'requires'    => [['core', '2.23']], // Dependencies
-        'permissions' => 'usage,contentadmin',
-        'priority'    => 200,
-        'type'        => 'plugin',
+        'requires'    => [['core', '2.24']],
+        'permissions' => dcCore::app()->auth->makePermissions([
+            dcAuth::PERMISSION_USAGE,
+            dcAuth::PERMISSION_CONTENT_ADMIN,
+        ]),
+        'priority' => 200,
+        'type'     => 'plugin',
 
-        'details'    => 'https://open-time.net/?q=fairEmail',       // Details URL
-        'support'    => 'https://github.com/franck-paul/fairEmail', // Support URL
+        'details'    => 'https://open-time.net/?q=fairEmail',
+        'support'    => 'https://github.com/franck-paul/fairEmail',
         'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/master/dcstore.xml',
     ]
 );

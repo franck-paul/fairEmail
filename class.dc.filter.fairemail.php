@@ -10,10 +10,6 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
-if (!defined('DC_RC_PATH')) {
-    return;
-}
-
 class dcFilterFairEmail extends dcSpamFilter
 {
     public $name    = 'Fair Email';
@@ -33,9 +29,9 @@ class dcFilterFairEmail extends dcSpamFilter
     public function isSpam($type, $author, $email, $site, $ip, $content, $post_id, &$status)
     {
         if (($email != '') && dcCore::app()->blog->getComments([
-            'comment_email' => $email,  // searched email
-            'comment_status' => 1,      // published comment
-            'comment_trackback' => 0,    // not a trackback
+            'comment_email'     => $email,                      // searched email
+            'comment_status'    => dcBlog::COMMENT_PUBLISHED,   // published comment
+            'comment_trackback' => 0,                           // not a trackback
         ], true)->f(0) > 0) {
             // Mail already used in previous published comment, not a spam
             return false;
