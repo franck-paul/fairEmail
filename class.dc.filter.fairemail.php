@@ -10,7 +10,10 @@
  * @copyright Franck Paul carnet.franck.paul@gmail.com
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
-class dcFilterFairEmail extends dcSpamFilter
+
+use Dotclear\Plugin\antispam\SpamFilter;
+
+class dcFilterFairEmail extends SpamFilter
 {
     public $name    = 'Fair Email';
     public $has_gui = false;
