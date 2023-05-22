@@ -11,4 +11,4 @@
 
 use Dotclear\Helper\L10n;
 
-L10n::$locales['Fair Email spam filter'] = '';
+L10n::$locales['Fair Email spam filter'] = 'Filtre antispam sur emails légitimes (déjà publiés)';
