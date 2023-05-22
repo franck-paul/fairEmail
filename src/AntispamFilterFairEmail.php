@@ -1,19 +1,24 @@
 <?php
 /**
- * @brief fairEmail, an antispam filter plugin for Dotclear 2
+ * @brief fairEmail, a plugin for Dotclear 2
  *
  * @package Dotclear
  * @subpackage Plugins
  *
- * @author Franck Paul
+ * @author Jean-Christian Denis, Franck Paul and contributors
  *
- * @copyright Franck Paul carnet.franck.paul@gmail.com
+ * @copyright Jean-Christian Denis, Franck Paul
  * @copyright GPL-2.0 https://www.gnu.org/licenses/gpl-2.0.html
  */
+declare(strict_types=1);
 
+namespace Dotclear\Plugin\fairEmail;
+
+use dcBlog;
+use dcCore;
 use Dotclear\Plugin\antispam\SpamFilter;
 
-class dcFilterFairEmail extends SpamFilter
+class AntispamFilterFairEmail extends SpamFilter
 {
     public $name    = 'Fair Email';
     public $has_gui = false;
