@@ -15,24 +15,24 @@ declare(strict_types=1);
 namespace Dotclear\Plugin\fairEmail;
 
 use dcBlog;
-use dcCore;
+use Dotclear\App;
 use Dotclear\Plugin\antispam\SpamFilter;
 
 class AntispamFilterFairEmail extends SpamFilter
 {
     /** @var string Filter name */
-    public $name = 'Fair Email';
+    public string $name = 'Fair Email';
 
     /** @var bool Filter has settings GUI? */
-    public $has_gui = false;
+    public bool $has_gui = false;
 
     /** @var bool Is filter active? */
-    public $active = false;
+    public bool $active = false;
 
     /**
      * Sets the filter description.
      */
-    protected function setInfo()
+    protected function setInfo(): void
     {
         $this->description = __('Fair Email spam filter');
     }
@@ -47,7 +47,7 @@ class AntispamFilterFairEmail extends SpamFilter
      *
      * @return     string  The status message.
      */
-    public function getStatusMessage(string $status, ?int $comment_id)
+    public function getStatusMessage(string $status, ?int $comment_id): string
     {
         return sprintf(__('Filtered by %s.'), $this->guiLink());
     }
@@ -71,7 +71,7 @@ class AntispamFilterFairEmail extends SpamFilter
      */
     public function isSpam(string $type, ?string $author, ?string $email, ?string $site, ?string $ip, ?string $content, ?int $post_id, string &$status)
     {
-        if (($email != '') && dcCore::app()->blog->getComments([
+        if (($email != '') && App::blog()->getComments([
             'comment_email'     => $email,                      // searched email
             'comment_status'    => dcBlog::COMMENT_PUBLISHED,   // published comment
             'comment_trackback' => 0,                           // not a trackback

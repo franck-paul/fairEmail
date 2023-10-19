@@ -14,7 +14,8 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\fairEmail;
 
-use dcCore;
+use ArrayObject;
+use Dotclear\App;
 use Dotclear\Core\Process;
 
 class Prepend extends Process
@@ -30,7 +31,11 @@ class Prepend extends Process
             return false;
         }
 
-        dcCore::app()->spamfilters[] = AntispamFilterFairEmail::class;
+        App::behavior()->addBehaviors([
+            'AntispamInitFilters' => function (ArrayObject $spamfilters): void {
+                $spamfilters->append(AntispamFilterFairEmail::class);
+            },
+        ]);
 
         return true;
     }
