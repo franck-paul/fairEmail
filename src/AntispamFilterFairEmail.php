@@ -14,8 +14,8 @@ declare(strict_types=1);
 
 namespace Dotclear\Plugin\fairEmail;
 
-use dcBlog;
 use Dotclear\App;
+use Dotclear\Interface\Core\BlogInterface;
 use Dotclear\Plugin\antispam\SpamFilter;
 
 class AntispamFilterFairEmail extends SpamFilter
@@ -73,7 +73,7 @@ class AntispamFilterFairEmail extends SpamFilter
     {
         if (($email != '') && App::blog()->getComments([
             'comment_email'     => $email,                      // searched email
-            'comment_status'    => dcBlog::COMMENT_PUBLISHED,   // published comment
+            'comment_status'    => BlogInterface::COMMENT_PUBLISHED,   // published comment
             'comment_trackback' => 0,                           // not a trackback
         ], true)->f(0) > 0) {
             // Mail already used in previous published comment, not a spam
