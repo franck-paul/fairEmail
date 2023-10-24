@@ -14,7 +14,7 @@ $this->registerModule(
     'Fair Email',
     'Fair Email filter for antispam Dotclear plugin',
     'Franck Paul',
-    '3.0',
+    '4.0',
     [
         'requires'    => [['core', '2.28']],
         'permissions' => 'My',
