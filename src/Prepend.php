@@ -32,7 +32,7 @@ class Prepend extends Process
         }
 
         App::behavior()->addBehaviors([
-            'AntispamInitFilters' => function (ArrayObject $spamfilters): void {
+            'AntispamInitFilters' => static function (ArrayObject $spamfilters) : void {
                 $spamfilters->append(AntispamFilterFairEmail::class);
             },
         ]);
