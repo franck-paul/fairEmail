@@ -23,6 +23,6 @@ $this->registerModule(
 
         'details'    => 'https://open-time.net/?q=fairEmail',
         'support'    => 'https://github.com/franck-paul/fairEmail',
-        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/master/dcstore.xml',
+        'repository' => 'https://raw.githubusercontent.com/franck-paul/fairEmail/main/dcstore.xml',
     ]
 );
