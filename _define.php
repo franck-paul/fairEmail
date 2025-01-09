@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief fairEmail, an antispam filter plugin for Dotclear 2
  *
@@ -16,7 +17,7 @@ $this->registerModule(
     'Franck Paul',
     '4.2',
     [
-        'requires'    => [['core', '2.28']],
+        'requires'    => [['core', '2.33']],
         'permissions' => 'My',
         'priority'    => 200,
         'type'        => 'plugin',
