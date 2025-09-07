@@ -1,12 +1,12 @@
 <modules xmlns:da="http://dotaddict.org/da/">
   <module id="fairEmail">
     <name>Fair Email</name>
-    <version>5.0</version>
+    <version>6.0</version>
     <author>Franck Paul</author>
     <desc>Fair Email filter for antispam Dotclear plugin</desc>
-    <date>2003-08-13T13:42:00+0100</date>
-    <file>https://github.com/franck-paul/fairEmail/releases/download/5.0/plugin-fairEmail-5.0.zip</file>
-    <da:dcmin>2.33</da:dcmin>
+    <date>2025-09-07T16:04:24+0200</date>
+    <file>https://github.com/franck-paul/fairEmail/releases/download/6.0/plugin-fairEmail-6.0.zip</file>
+    <da:dcmin>2.36</da:dcmin>
     <da:details>https://open-time.net/?q=fairEmail</da:details>
     <da:support>https://github.com/franck-paul/fairEmail</da:support>
   </module>
