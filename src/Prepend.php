@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @brief fairEmail, a plugin for Dotclear 2
  *
@@ -16,10 +17,12 @@ namespace Dotclear\Plugin\fairEmail;
 
 use ArrayObject;
 use Dotclear\App;
-use Dotclear\Core\Process;
+use Dotclear\Helper\Process\TraitProcess;
 
-class Prepend extends Process
+class Prepend
 {
+    use TraitProcess;
+
     public static function init(): bool
     {
         return self::status(My::checkContext(My::PREPEND));
@@ -32,7 +35,7 @@ class Prepend extends Process
         }
 
         App::behavior()->addBehaviors([
-            'AntispamInitFilters' => static function (ArrayObject $spamfilters) : void {
+            'AntispamInitFilters' => static function (ArrayObject $spamfilters): void {
                 $spamfilters->append(AntispamFilterFairEmail::class);
             },
         ]);
