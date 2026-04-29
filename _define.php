@@ -15,9 +15,9 @@ $this->registerModule(
     'Fair Email',
     'Fair Email filter for antispam Dotclear plugin',
     'Franck Paul',
-    '6.0',
+    '7.0',
     [
-        'date'        => '2025-09-07T16:04:24+0200',
+        'date'        => '2026-04-29T14:25:11+0200',
         'requires'    => [['core', '2.38']],
         'permissions' => 'My',
         'priority'    => 200,
