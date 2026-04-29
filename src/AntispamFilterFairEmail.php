@@ -75,7 +75,7 @@ class AntispamFilterFairEmail extends SpamFilter
             'comment_email'     => $email,                              // searched email
             'comment_status'    => App::status()->comment()::PUBLISHED, // published comment
             'comment_trackback' => 0,                                   // not a trackback
-        ], true)->f(0) > 0) {
+        ], true)->cardinal() > 0) {
             // Mail already used in previous published comment, not a spam
             return false;
         }
