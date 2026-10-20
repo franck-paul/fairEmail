@@ -3,7 +3,7 @@ Dotclear 2 Antispam filter
 [![Release](https://img.shields.io/github/v/release/franck-paul/fairEmail)](https://github.com/franck-paul/fairEmail/releases)
 [![Date](https://img.shields.io/github/release-date/franck-paul/fairEmail)](https://github.com/franck-paul/fairEmail/releases)
 [![Issues](https://img.shields.io/github/issues/franck-paul/fairEmail)](https://github.com/franck-paul/fairEmail/issues)
-[![License](https://img.shields.io/github/license/franck-paul/fairEmail)](https://github.com/franck-paul/fairEmail/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/franck-paul/fairEmail)](https://github.com/franck-paul/fairEmail/blob/main/LICENSE)
 
 ==========================
 
