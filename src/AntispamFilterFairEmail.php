@@ -71,7 +71,7 @@ class AntispamFilterFairEmail extends SpamFilter
      */
     public function isSpam(string $type, ?string $author, ?string $email, ?string $site, ?string $ip, ?string $content, ?int $post_id, string &$status): ?bool
     {
-        if (($email != '') && App::blog()->getComments([
+        if (((string) $email !== '') && App::blog()->getComments([
             'comment_email'     => $email,                              // searched email
             'comment_status'    => App::status()->comment()::PUBLISHED, // published comment
             'comment_trackback' => 0,                                   // not a trackback
